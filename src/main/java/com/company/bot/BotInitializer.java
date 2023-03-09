@@ -13,6 +13,7 @@ public class BotInitializer
 {
     TelegramBotsApi telegramBotsApi;
     Bot bot;
+
     @Autowired
     public void setBot(Bot bot)
     {

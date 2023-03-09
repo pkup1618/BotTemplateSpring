@@ -1,4 +1,4 @@
-package com.company.persistence;
+package com.company.config;
 
 
 import com.company.services.PropertiesService;
@@ -14,7 +14,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 import javax.sql.DataSource;
 import java.util.Objects;
 import java.util.Properties;
-import java.util.Scanner;
+
 
 @Configuration
 public class PersistenceConfig

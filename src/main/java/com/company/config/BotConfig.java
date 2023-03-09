@@ -1,4 +1,4 @@
-package com.company.bot;
+package com.company.config;
 
 import com.company.services.PropertiesService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,12 +17,14 @@ public class BotConfig
     }
 
     @Bean
-    public DefaultBotOptions botOptions() {
+    public DefaultBotOptions botOptions()
+    {
         return new DefaultBotOptions();
     }
 
     @Bean
-    public String botToken() {
+    public String botToken()
+    {
         return propertiesService.loadTgBotProperties().getProperty("token");
     }
 
