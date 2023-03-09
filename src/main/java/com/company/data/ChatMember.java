@@ -11,32 +11,35 @@ public class ChatMember
 
     }
 
-    public ChatMember(Long tgId)
+    public ChatMember(Long id)
     {
-        this.tgId = tgId;
+        this.id = id;
     }
 
     @Id()
     @Column(name = "id", nullable = false)
-    @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
+
     public Long getId()
     {
         return id;
     }
+
     public void setId(Long id)
     {
         this.id = id;
     }
 
-    @Column(name = "tgId", nullable = false)
-    private Long tgId;
-    public Long getTgId()
+    @Column(name = "locale")
+    private String locale;
+
+    public String getLocale()
     {
-        return tgId;
+        return locale;
     }
-    public void setTgId(Long tgId)
+
+    public void setLocale(String locale)
     {
-        this.tgId = tgId;
+        this.locale = locale;
     }
 }
