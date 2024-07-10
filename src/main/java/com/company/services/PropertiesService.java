@@ -34,11 +34,11 @@ public class PropertiesService
 
     public Properties loadDbConnectionProperties()
     {
-        return loadProperties("db_connection_props");
+        return loadProperties("db_connection_props.properties");
     }
 
     public Properties loadTgBotProperties()
     {
-        return loadProperties("tg_bot_props");
+        return loadProperties("tg_bot_props.properties");
     }
 }

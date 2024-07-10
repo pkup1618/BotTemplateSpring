@@ -47,7 +47,7 @@ public class PersistenceConfig
 
         Properties prop = new Properties();
         prop.setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
-        prop.setProperty("hibernate.ddl-auto", "update"); //create on first start
+        prop.setProperty("hibernate.ddl-auto", "update"); //create on first start, update on second
         factoryBean.setJpaProperties(prop);
 
         return factoryBean;
@@ -69,6 +69,8 @@ public class PersistenceConfig
                 .url(dbConnectionInfo.getProperty("db_url"))
                 .driverClassName("org.postgresql.Driver")
                 .build();
+
+                
         //todo это работает неправильно. Мне нужно загружать данные во время работы, а не компиляции
     }
 }
